@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import "tailwindcss";
+
+
+/* añadimos la fuente Inter */
+
+
+
+@layer base {
+  :root {
+    --text: #0c0317;
+    --background: #f6f2fd;
+    --primary: #48277c;
+    --secondary: #ec87ee;
+    --accent: #e859d3;
+    --font-inter: 'Inter', sans-serif;
+  }
+  .dark {
+    --text: #f1e8fc;
+    --background: #06020d;
+    --primary: #a383d8;
+    --secondary: #771178;
+    --accent: #a61791;
+  }
+}
