@@ -1,5 +1,5 @@
 <template>
-    <section class="flex flex-col justify-center items-center text-center text-[var(--text)] p-4 parallax">
+    <section class="flex flex-col justify-center items-center text-center text-[var(--text)] p-4 parallax-bg">
         <!-- El contenedor principal del contenido -->
         <div class="bg-white shadow-lg items-center justify-center rounded-lg 
             flex flex-col md:flex-row gap-4 p-6 py-6 md:p-8
@@ -39,10 +39,19 @@
     </section>
 </template> 
 <style scoped>
-.parallax {
+.parallax-bg {
+    /* Estilos base para todos los dispositivos */
     background-image: url('/Carretera.jpg');
-    background-attachment: fixed;
     background-size: cover;
     background-position: center;
+    background-attachment: scroll; /* Por defecto, la imagen se desplaza con la página (ideal para móviles) */
+}
+
+/* Media query para pantallas más grandes (a partir de 768px, el tamaño 'md' de Tailwind) */
+@media (min-width: 768px) {
+    .parallax-bg {
+        /* En pantallas más grandes, el fondo se fija para el efecto parallax */
+        background-attachment: fixed;
+    }
 }
 </style>

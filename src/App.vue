@@ -12,7 +12,7 @@ const headerHeight = ref(0);
 
 //estilos dinamicos para el header
 const headerStyles = computed(() => ({
-  'height': `calc(100vh - ${headerHeight.value}px)`,
+  'height': `calc(100svh - ${headerHeight.value}px)`,
   'margin-top': `${headerHeight.value}px`
 }));
 
