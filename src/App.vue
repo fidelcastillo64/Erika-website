@@ -1,18 +1,20 @@
 <script setup lang="ts">
-import Header from './components/header.vue';
-import HeroSecction from './components/HeroSecction.vue';
-import Sections from './components/Sections.vue';
-import { ref, onMounted, computed, onUnmounted } from 'vue';
+const Header = defineAsyncComponent(() => import('./components/Header.vue'));
+const HeroSection = defineAsyncComponent(() => import('./components/HeroSection.vue'));
+const Sections = defineAsyncComponent(() => import('./components/Sections.vue'));
+const Phrase = defineAsyncComponent(() => import('./components/Phrase.vue'));
+const TimeLine = defineAsyncComponent(() => import('./components/TimeLine.vue'));
+import { ref, onMounted, computed, onUnmounted, defineAsyncComponent } from 'vue';
 
 
 // calculamos el alto de la pantalla para ajustar el header
 const HeaderRef = ref<InstanceType<typeof Header> | null>(null);
-const HeroSectionRef = ref<InstanceType<typeof HeroSecction> | null>(null);
+const HeroSectionRef = ref<InstanceType<typeof HeroSection> | null>(null);
 const headerHeight = ref(0);
 
-//estilos dinamicos para el header
+// Estilos dinámicos para el header
 const headerStyles = computed(() => ({
-  'height': `calc(100svh - ${headerHeight.value}px)`,
+  'height': `calc(var(--app-height) - ${headerHeight.value}px)`,
   'margin-top': `${headerHeight.value}px`
 }));
 
@@ -33,8 +35,10 @@ onUnmounted(() => {
 
 <template>
   <Header ref="HeaderRef" class="header"  />
-  <HeroSecction ref="HeroSectionRef" :style="headerStyles" />
-  <Sections />  
+  <HeroSection ref="HeroSectionRef" :style="headerStyles" />
+  <Sections /> 
+  <Phrase />
+  <TimeLine />
 </template>
 
 <style scoped>

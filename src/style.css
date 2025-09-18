@@ -1,9 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* importamos las fuentes barlow y inter */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import "tailwindcss";
 
 
 /* añadimos la fuente Inter */
-
+:root {
+    --font-inter: 'Inter', sans-serif;
+    --font-barlow: 'Barlow', sans-serif;
+    --font-roboto: "Roboto", sans-serif;
+}
 
 
 @layer base {
@@ -13,7 +21,6 @@
     --primary: #48277c;
     --secondary: #ec87ee;
     --accent: #e859d3;
-    --font-inter: 'Inter', sans-serif;
   }
   .dark {
     --text: #f1e8fc;
@@ -21,5 +28,14 @@
     --primary: #a383d8;
     --secondary: #771178;
     --accent: #a61791;
+  }
+}
+:root {
+  --app-height: 100vh; /* Valor por defecto */
+
+}
+@media (max-width: 768px) { /* Ejemplo para móviles */
+  :root {
+    --app-height: 100dvh; /* dvh considera la barra de direcciones dinámica */
   }
 }

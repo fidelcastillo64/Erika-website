@@ -17,21 +17,21 @@
                 />
             </div>
             <!-- Contenedor del texto -->
-            <div class="flex flex-col flex-1 justify-center text-[var(--primary)] text-left gap-1 md:gap-4 px-4 h-full">
-                <h1 class="text-xl md:text-4xl font-bold mb-0">Erika Díaz Villalón</h1>
-                <p class="text-lg md:text-3xl text-[var(--text)]">Abogada</p>
+            <div class="flex flex-col flex-1 justify-center text-[var(--primary)] text-left gap-3 md:gap-4 px-4 h-full">
+                <h1 class="text-2xl md:text-4xl font-bold mb-0">Erika Díaz Villalón</h1>
+                <p class="text-xl md:text-3xl text-[var(--text)]">Abogada</p>
                 <p class="text-2xl md:text-5xl font-bold">Líder social</p>
                 <div class="h-1 bg-[var(--primary)] w-8/10 "></div>
-                <p class="text-xs md:text-base text-[var(--text)]">
+                <p class="text-sm md:text-xl text-[var(--text)]">
                     Las cosas lindas que me están pasando las acepto y agradezco con amor
                 </p>
                 <!-- Contenedor de los íconos de redes sociales -->
-                <div class="flex justify-start items-center gap-4 m-1 text-center">
+                <div class="flex justify-start items-center gap-4 text-center">
                     <font-awesome-icon icon="fa-brands fa-square-facebook" size="2x" class="text-[var(--primary)] hover:text-[var(--accent)] cursor-pointer transition duration-300 ease-linear" />
                     <font-awesome-icon icon="fa-brands fa-instagram" size="2x" class="text-[var(--primary)] hover:text-[var(--accent)] cursor-pointer transition duration-300 ease-linear" />
                     <font-awesome-icon icon="fa-brands fa-x-twitter" size="2x" class="text-[var(--primary)] hover:text-[var(--accent)] cursor-pointer transition duration-300 ease-linear" />
                 </div>
-                <p class="text-base md:text-2xl text-[var(--text)] underline font-inter italic cursor-pointer hover:text-[var(--accent)] transition duration-300 ease-linear">
+                <p class=" text-lg md:text-2xl text-[var(--text)] underline font-inter italic cursor-pointer hover:text-[var(--accent)] transition duration-300 ease-linear">
                     Acerca de mi
                 </p>    
             </div>
