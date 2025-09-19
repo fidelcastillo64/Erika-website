@@ -1,13 +1,13 @@
 <template>
     <section class="h-fit w-full text-xm md:text-2xl bg-white flex flex-col md:flex-row  justify-center items-center text-center">
         <div class="w-full md:w-1/2 p-5 md:px-20">
-            <h2 class="text-3xl md:text-4xl w-full text-left font-bold text-(--primary) mb-8">-Trayectoria</h2>
+            <h2 class="text-3xl md:text-4xl w-full text-left font-bold text-(--primary) mb-8 mt-3">-Trayectoria</h2>
             <div class="flex w-full flex-col items-start ">
                 <Year v-for="(item, index) in Timeline" :key="item.Year" :Year="item.Year" :cargos="item.cargos" :last="index === Timeline.length - 1" :index="index" />
             </div>
         </div>
-        <div class=" text-white flex flex-col justify-center w-full md:w-1/2 items-center gap-4 h-full text-center p-0 md:p-4">
-            <img src="/publico.jpg" class="w-full h-full bg-cover object-cover " />
+        <div class=" text-white flex flex-col justify-center items-center gap-4 h-full text-center p-0 md:p-4">
+            <img src="/publico.jpg" class="h-full bg-cover object-cover " />
         </div>
     </section>
 </template>

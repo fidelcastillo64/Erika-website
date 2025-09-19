@@ -42,16 +42,8 @@
 .parallax-bg {
     /* Estilos base para todos los dispositivos */
     background-image: url('/Carretera.jpg');
+    background-attachment: fixed;
     background-size: cover;
-    background-position: center;
-    background-attachment: scroll; /* Por defecto, la imagen se desplaza con la página (ideal para móviles) */
 }
 
-/* Media query para pantallas más grandes (a partir de 768px, el tamaño 'md' de Tailwind) */
-@media (min-width: 768px) {
-    .parallax-bg {
-        /* En pantallas más grandes, el fondo se fija para el efecto parallax */
-        background-attachment: fixed;
-    }
-}
 </style>

@@ -7,10 +7,10 @@
 
 
 /* añadimos la fuente Inter */
-:root {
-    --font-inter: 'Inter', sans-serif;
-    --font-barlow: 'Barlow', sans-serif;
-    --font-roboto: "Roboto", sans-serif;
+@theme {
+  --font-inter: "Inter", sans-serif;
+  --font-barlow: "Barlow", sans-serif;
+  --font-roboto: "Roboto", sans-serif;
 }
 
 

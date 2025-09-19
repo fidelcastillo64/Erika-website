@@ -4,13 +4,16 @@ const HeroSection = defineAsyncComponent(() => import('./components/HeroSection.
 const Sections = defineAsyncComponent(() => import('./components/Sections.vue'));
 const Phrase = defineAsyncComponent(() => import('./components/Phrase.vue'));
 const TimeLine = defineAsyncComponent(() => import('./components/TimeLine.vue'));
+const Present = defineAsyncComponent(() => import('./components/Present.vue'));
 import { ref, onMounted, computed, onUnmounted, defineAsyncComponent } from 'vue';
+import Posts from './components/posts.vue';
+
 
 
 // calculamos el alto de la pantalla para ajustar el header
 const HeaderRef = ref<InstanceType<typeof Header> | null>(null);
 const HeroSectionRef = ref<InstanceType<typeof HeroSection> | null>(null);
-const headerHeight = ref(0);
+const headerHeight = ref(80); // Altura inicial del header en píxeles
 
 // Estilos dinámicos para el header
 const headerStyles = computed(() => ({
@@ -39,6 +42,7 @@ onUnmounted(() => {
   <Sections /> 
   <Phrase />
   <TimeLine />
+  <!-- <Present /> -->
 </template>
 
 <style scoped>

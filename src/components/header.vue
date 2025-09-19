@@ -1,5 +1,5 @@
 <template>
-  <header class="bg-white text-(--primary) p-4 font-italic flex flex-col-2 items-center md:flex-row md:justify-between md:px-20 xl:px-30">
+  <header class="bg-white text-(--primary) p-4 font-italic flex flex-col-2 items-center h-[80px] md:flex-row md:justify-between md:px-20 xl:px-30">
     <div class=" flex w-full items-center ">
       <h1 class="text-xl md:text-2xl font-bold">Erika Díaz Villalón</h1>
     </div>

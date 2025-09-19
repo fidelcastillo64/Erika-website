@@ -28,6 +28,7 @@ defineProps<{
     Year: string;
     cargos: string[];
 }>();
+
 </script>
 <style scoped>
 </style>
