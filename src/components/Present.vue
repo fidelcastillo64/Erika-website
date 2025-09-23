@@ -1,7 +1,6 @@
 <template>
-    <section v-if="posts.length">
-      <h2 class="w-full bg-(--secondary) text-white px-20 py-6 text-3xl font-barlow font-semibold">Mi Actualidad</h2>
-      <!-- añto screen menos -80px -->
+    <section v-if="posts.length" id="social">
+      <h2 class="w-full h-[80px] bg-(--secondary) text-white  md:px-20 px-6 py-6 text-2xl mb:text-3xl font-barlow font-semibold">Mi Actualidad</h2>
        <posts :posts="posts" />
     </section>
     <section v-else>
@@ -18,7 +17,7 @@ interface InstagramPost {
   caption: string;
   date_time_posted: string;
   pic_text: string; // Campo opcional para el texto adicional
-  post_url: string; // Campo opcional para la URL del post
+  link: string; // Campo opcional para la URL del post
 }
 
 // Composable logic for InstagramFeed
@@ -32,7 +31,6 @@ async function fetchInstagramFeed() {
     const response = await axios.get<{ posts: InstagramPost[] }>(jsonFeedUrl);
     // 4. tommos solo los primeros 5 posts
     posts.value = response.data.posts.slice(0, 5);
-    console.log('Posts fetched:', posts.value);
   } catch (error) {
     console.error('Error al obtener el feed de Instagram:', error);
   }

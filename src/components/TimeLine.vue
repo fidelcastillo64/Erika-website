@@ -1,8 +1,8 @@
 <template>
-    <section class="h-fit w-full text-xm md:text-2xl bg-white flex flex-col md:flex-row  justify-center items-center text-center">
-        <div class="w-full md:w-1/2 p-5 md:px-20">
+    <section class="h-fit w-full text-xm md:text-2xl bg-white flex flex-col md:flex-row  justify-center items-center text-center" id="timeline">
+        <div class="w-full xl:w-1/2 p-5 md:px-20" data-aos="fade-up" data-aos-delay="200">
             <h2 class="text-3xl md:text-4xl w-full text-left font-bold text-(--primary) mb-8 mt-3">-Trayectoria</h2>
-            <div class="flex w-full flex-col items-start ">
+            <div class="flex w-full flex-col items-start" >
                 <Year v-for="(item, index) in Timeline" :key="item.Year" :Year="item.Year" :cargos="item.cargos" :last="index === Timeline.length - 1" :index="index" />
             </div>
         </div>

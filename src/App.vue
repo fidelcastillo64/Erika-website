@@ -5,8 +5,11 @@ const Sections = defineAsyncComponent(() => import('./components/Sections.vue'))
 const Phrase = defineAsyncComponent(() => import('./components/Phrase.vue'));
 const TimeLine = defineAsyncComponent(() => import('./components/TimeLine.vue'));
 const Present = defineAsyncComponent(() => import('./components/Present.vue'));
+const Conctact = defineAsyncComponent(() => import('./components/Conctact.vue'));
+const Footer = defineAsyncComponent(() => import('./components/Footer.vue'));
 import { ref, onMounted, computed, onUnmounted, defineAsyncComponent } from 'vue';
-import Posts from './components/posts.vue';
+// 1. Obtener el botón por su ID
+
 
 
 
@@ -33,6 +36,34 @@ onMounted(() => {
 onUnmounted(() => {
   window.removeEventListener('resize', calculateHeaderHeight);
 });
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+
+    // Ahora, scrollToTopBtn ya no será null si el elemento existe en el HTML
+    if (scrollToTopBtn) {
+        // Lógica para mostrar/ocultar el botón al hacer scroll
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollToTopBtn.classList.remove('opacity-0', 'invisible');
+                scrollToTopBtn.classList.add('opacity-100', 'visible');
+            } else {
+                scrollToTopBtn.classList.remove('opacity-100', 'visible');
+                scrollToTopBtn.classList.add('opacity-0', 'invisible');
+            }
+        });
+
+        // Lógica para el clic del botón
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+});
+
   
 </script>
 
@@ -42,7 +73,16 @@ onUnmounted(() => {
   <Sections /> 
   <Phrase />
   <TimeLine />
-  <!-- <Present /> -->
+  <Present /> 
+  <Conctact />
+  <Footer />
+  <button id="scrollToTopBtn"
+    class="fixed bottom-5 right-5 z-100 p-3 bg-(--primary) text-white shadow-lg transition-all duration-300 opacity-0 invisible "
+    title="Ir arriba">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+    </svg>
+  </button>
 </template>
 
 <style scoped>

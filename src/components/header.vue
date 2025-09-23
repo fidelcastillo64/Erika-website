@@ -11,9 +11,10 @@
                     v-for="item in Mlist"
                     :key="item.name"
                     class="xl:text-lg text-xs"
+
                 >
                     <a
-                        :href="item.href"
+                        v-on:click="scrollToSection(item.href)"
                         class="block ease-linear transition duration-300 hover:text-[var(--accent)] font-inter font-bold italic underline"
                     >
                         {{ item.name }}

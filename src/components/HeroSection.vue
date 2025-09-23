@@ -1,5 +1,5 @@
 <template>
-    <section class="flex flex-col justify-center items-center text-center text-[var(--text)] p-4 parallax-bg">
+    <section class="flex flex-col justify-center items-center text-center text-[var(--text)] p-4 parallax-bg" id="home">
         <!-- El contenedor principal del contenido -->
         <div class="bg-white shadow-lg items-center justify-center rounded-lg 
             flex flex-col md:flex-row gap-4 p-6 py-6 md:p-8
