@@ -27,9 +27,15 @@
                 </p>
                 <!-- Contenedor de los íconos de redes sociales -->
                 <div class="flex justify-start items-center gap-4 text-center">
-                    <font-awesome-icon icon="fa-brands fa-square-facebook" size="2x" class="text-[var(--primary)] hover:text-[var(--accent)] cursor-pointer transition duration-300 ease-linear" />
-                    <font-awesome-icon icon="fa-brands fa-instagram" size="2x" class="text-[var(--primary)] hover:text-[var(--accent)] cursor-pointer transition duration-300 ease-linear" />
-                    <font-awesome-icon icon="fa-brands fa-x-twitter" size="2x" class="text-[var(--primary)] hover:text-[var(--accent)] cursor-pointer transition duration-300 ease-linear" />
+                    <a href="https://www.facebook.com/eridiazvillalon" target="_blank" rel="noopener noreferrer">
+                        <font-awesome-icon icon="fa-brands fa-square-facebook" size="2x" class="text-[var(--primary)] hover:text-[var(--accent)] cursor-pointer transition duration-300 ease-linear"  /> 
+                    </a>
+                    <a  href="https://www.instagram.com/eridiazvillalon" target="_blank" rel="noopener noreferrer">
+                        <font-awesome-icon icon="fa-brands fa-instagram" size="2x" class="text-[var(--primary)] hover:text-[var(--accent)] cursor-pointer transition duration-300 ease-linear" />
+                    </a>
+                    <a  href="https://x.com/eridiazvillalon" target="_blank" rel="noopener noreferrer">
+                        <font-awesome-icon icon="fa-brands fa-x-twitter" size="2x" class="text-[var(--primary)] hover:text-[var(--accent)] cursor-pointer transition duration-300 ease-linear" />
+                    </a>
                 </div>
                 <p class=" text-lg md:text-2xl text-[var(--text)] underline font-inter italic cursor-pointer hover:text-[var(--accent)] transition duration-300 ease-linear" @click="scrollToSection('#about')">
                     Acerca de mi
