@@ -3,19 +3,19 @@
         <div class="bg-(--primary) text-white w-full h-full flex items-center justify-center" >
             <div class="w-1/2">
                 <p class="w-full font-light">Sobre mi</p>
-                <h2 class="w-full text-3xl font-bold underline hover:text-gray-300 transition duration-300">Biografía ></h2>
+                <h2 class="w-full text-3xl font-bold underline hover:text-gray-300 transition duration-300" @click="scrollToSection('#about')">Biografía ></h2>
             </div>
         </div>
         <div class="bg-(--secondary) text-white w-full h-full flex items-center justify-center" >
             <div class="w-1/2">
                 <p class="w-full font-light">Trayectoria y</p>
-                <h2 class="w-full text-3xl font-bold underline hover:text-gray-300 transition duration-300">Profesional ></h2>
+                <h2 class="w-full text-3xl font-bold underline hover:text-gray-300 transition duration-300" @click="scrollToSection('#timeline')">Profesional ></h2>
             </div>
         </div>
         <div class="bg-(--accent) text-white w-full h-full flex items-center justify-center" >
             <div class="w-1/2">
                 <p class="w-full font-light">Publicaciones y</p>
-                <h2 class="w-full text-3xl font-bold underline hover:text-gray-300 transition duration-300">Medios ></h2>
+                <h2 class="w-full text-3xl font-bold underline hover:text-gray-300 transition duration-300" @click="scrollToSection('#social')">Medios ></h2>
             </div>
         </div>
     </section>
@@ -24,6 +24,14 @@
     </section>
 </template>
 <script setup lang="ts">
+const scrollToSection = (href: string): void => {
+  // Desplaza suavemente a la sección correspondiente
+  const section: HTMLElement | null = document.querySelector(href) as HTMLElement | null;
+  // Si la sección existe, desplázate a ella
+  if (section) {
+    section.scrollIntoView({ behavior: 'smooth' });
+  }
+};
 </script>
 <style scoped>
 .parallax {

@@ -15,7 +15,7 @@
                 >
                     <a
                         v-on:click="scrollToSection(item.href)"
-                        class="block ease-linear transition duration-300 hover:text-[var(--accent)] font-inter font-bold italic underline"
+                        class="block ease-linear hover:cursor-pointer transition duration-300 hover:text-[var(--accent)] font-inter font-bold italic underline"
                     >
                         {{ item.name }}
                     </a>
@@ -69,6 +69,7 @@ import {ref, computed } from 'vue';
 const Mlist = computed(() => [
     { name: 'Inicio', href: '#home' },
     { name: 'Acerca de mí', href: '#about' },
+    { name: 'Trayectoria', href: '#timeline' },
     { name: 'Mi Actualidad', href: '#social' },
     { name: 'Contacta me', href: '#contact' },
 ]);

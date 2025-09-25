@@ -7,7 +7,7 @@
             <font-awesome-icon icon="fa-brands fa-instagram" size="2x" class="hover:text-(--primary) cursor-pointer transition duration-300 ease-linear" />
             <font-awesome-icon icon="fa-brands fa-x-twitter" size="2x" class=" hover:text-(--primary) cursor-pointer transition duration-300 ease-linear" />
         </div>
-        <p class="flex md:w-1/3 text-right md:justify-end">Sitio web hecho por Ian Kevin Castillo</p>
+        <p class="flex md:w-1/3 text-right md:justify-end"><a href="https://fidelcastillo64.github.io/portafolio/" target="_blank" class="hover:text-(--primary) transition-all ease-in-out duration-300">Sitio web hecho por: Ian Kevin Castillo</a></p>
     </footer>
 </template>
 <script setup lang="ts">

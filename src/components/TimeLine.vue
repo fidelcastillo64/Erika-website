@@ -16,6 +16,7 @@ import { computed, defineAsyncComponent } from 'vue';
 const Year = defineAsyncComponent(() => import('./elements/Year.vue'));
 
 const Timeline = computed(() => [
+    { Year: '2021 - 2024', cargos: ["Diputada Federal Distrito 5"] },
     { Year: '2018 - 2021', cargos: ["Secretaria de Desarrollo Social del gobierno de Corregidora, Querétaro."] },
     { Year: '2015 - 2018', cargos: ["Regidora de Corregidora, Querétaro."] },
     { Year: '2010 - 2013', cargos: ["Secretaria de Promoción Política de la Mujer en Corregidora, Querétaro.", "Asistente del Presidente del Comité Directivo Municipal de Corregidora, Querétaro", "Integrante del Sistema de Protección Integral Nacional de Niñas, Niños y Adolescentes (SIPINNA) a nivel municipal."]  },

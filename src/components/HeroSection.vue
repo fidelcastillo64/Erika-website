@@ -31,7 +31,7 @@
                     <font-awesome-icon icon="fa-brands fa-instagram" size="2x" class="text-[var(--primary)] hover:text-[var(--accent)] cursor-pointer transition duration-300 ease-linear" />
                     <font-awesome-icon icon="fa-brands fa-x-twitter" size="2x" class="text-[var(--primary)] hover:text-[var(--accent)] cursor-pointer transition duration-300 ease-linear" />
                 </div>
-                <p class=" text-lg md:text-2xl text-[var(--text)] underline font-inter italic cursor-pointer hover:text-[var(--accent)] transition duration-300 ease-linear">
+                <p class=" text-lg md:text-2xl text-[var(--text)] underline font-inter italic cursor-pointer hover:text-[var(--accent)] transition duration-300 ease-linear" @click="scrollToSection('#about')">
                     Acerca de mi
                 </p>    
             </div>
@@ -47,3 +47,14 @@
 }
 
 </style>
+<script setup lang="ts">
+const scrollToSection = (href: string): void => {
+  // Desplaza suavemente a la sección correspondiente
+  const section: HTMLElement | null = document.querySelector(href) as HTMLElement | null;
+  // Si la sección existe, desplázate a ella
+  if (section) {
+    section.scrollIntoView({ behavior: 'smooth' });
+  }
+};
+
+</script>
