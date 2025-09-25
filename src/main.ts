@@ -19,7 +19,7 @@ app.component('font-awesome-icon', FontAwesomeIcon);
 app.use(VueFire, {
   firebaseApp,
   modules: [
-    // Aquí puedes añadir los módulos de Firebase que necesites
+    // aqui se agregan los modulos de VueFire que se quieran usar
   ],
 });
 
